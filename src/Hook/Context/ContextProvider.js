@@ -4,17 +4,20 @@ let initialCart = [];
 
 let cartReducer = (state, action) => {
     switch (action.type) {
+
         case "addCart": {
-            let index = state.findIndex(item => item.id === action.product.id);
+            let index = state.findIndex(item => item.id === action.item.id);
             if (index !== -1) {
                 state[index].quantity += 1;
                 return { ...state }
             }
-            return [...state, { ...action.product, quantity: 1 }]
+            return [...state, { ...action.item, quantity: 1 }]
         };
         default: return false
     }
 }
+// định nghĩa một cái component bao quát toàn ứng dụng
+// và chứa state của ứng dụng
 export default function ContextProvider(props) {
     let [cart, dispatch] = useReducer(cartReducer, initialCart);
     //store giống như rootReducer 
