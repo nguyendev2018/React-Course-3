@@ -1,5 +1,7 @@
 import React, { useReducer } from 'react'
-const context = React.createContext()
+export const context = React.createContext();
+let initialCart = [];
+
 let cartReducer = (state, action) => {
     switch (action.type) {
         case "addCart": {
@@ -13,8 +15,9 @@ let cartReducer = (state, action) => {
         default: return false
     }
 }
-export default function ContextProvider() {
+export default function ContextProvider(props) {
     let [cart, dispatch] = useReducer(cartReducer, initialCart);
+    //store giống như rootReducer 
     const store = {
         cartReducer: [cart, dispatch]
     }
