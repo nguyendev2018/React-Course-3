@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-
+import { inDecreaseAmount } from '../redux/types/Bugger';
 class TableBugger extends Component {
     renderItem = () => {
         const listTable = this.props.listTable;
@@ -9,11 +9,13 @@ class TableBugger extends Component {
                 <td scope="row">{item.id}</td>
                 <td>{item.name}</td>
                 <td>
-                    <button className='btn btn-success btn-sm mr-2' type="">-</button>
+                    <button onClick={() => {
+                        this.props.inDecreaseAmount(item.id)
+                    }} className='btn btn-success btn-sm mr-2' type="">-</button>
                     {item.amount}
                     <button className='btn btn-success btn-sm ml-2' type="">+</button>
                 </td>
-                <td>{item.price}</td>
+                <td>{item.price.toLocaleString()}</td>
             </tr>
         })
     }
@@ -42,4 +44,11 @@ const mapStateToProps = (state) => {
         listTable: state.BuggerReducer.TableBugger
     }
 }
-export default connect(mapStateToProps)(TableBugger)
+const mapDispatchToProps = (dispatch) => {
+    return {
+        inDecreaseAmount: (ItemId) => {
+            dispatch(inDecreaseAmount(ItemId))
+        }
+    }
+}
+export default connect(mapStateToProps, mapDispatchToProps)(TableBugger)
