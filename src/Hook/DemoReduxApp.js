@@ -1,47 +1,27 @@
 import React from 'react'
+import { connect, useDispatch, useSelector } from 'react-redux'
 
-export default function DemoReduxApp() {
+export default function DemoReduxApp(props) {
+    let comments = useSelector(state => state.FaceBookReducer.comments);
+    console.log(comments);
+
     return (
         <div>
             <h3>Facebook App !</h3>
             <div className="card text-left">
                 <div className="card-header">
-                    <div className="row">
-                        <div className="col-2">
-                            <img src="https://picsum.photos/id/200/300" alt="" style={{ height: 60 }} />
+
+                    {comments.map((item, index) => {
+                        return <div className="row">
+                            <div className="col-2">
+                                <img src="https://picsum.photos/id/200/300" alt="" style={{ height: 60 }} />
+                            </div>
+                            <div className="col-10">
+                                <h6 className="h6 text-danger">{item.name}</h6>
+                                <p>Hi </p>
+                            </div>
                         </div>
-                        <div className="col-10">
-                            <h6 className="h6 text-danger">Yone</h6>
-                            <p>Hi </p>
-                        </div>
-                    </div>
-                    <div className="row">
-                        <div className="col-2">
-                            <img src="https://picsum.photos/id/200/300" alt="" style={{ height: 60 }} />
-                        </div>
-                        <div className="col-10">
-                            <h6 className="h6 text-danger">Yone</h6>
-                            <p>Hi </p>
-                        </div>
-                    </div>
-                    <div className="row">
-                        <div className="col-2">
-                            <img src="https://picsum.photos/id/200/300" alt="" style={{ height: 60 }} />
-                        </div>
-                        <div className="col-10">
-                            <h6 className="h6 text-danger">Yone</h6>
-                            <p>Hi </p>
-                        </div>
-                    </div>
-                    <div className="row">
-                        <div className="col-2">
-                            <img src="https://picsum.photos/id/200/300" alt="" style={{ height: 60 }} />
-                        </div>
-                        <div className="col-10">
-                            <h6 className="h6 text-danger">Yone</h6>
-                            <p>Hi </p>
-                        </div>
-                    </div>
+                    })}
                 </div>
                 <div className="card-body">
                     <div className="form-group">
@@ -62,3 +42,9 @@ export default function DemoReduxApp() {
         </div>
     )
 }
+// const mapStateToProps = (state) => {
+//     return {
+//         listFace: state.FaceBookReducer.comments
+//     }
+// }
+// export default connect(mapStateToProps)(DemoReduxApp)
