@@ -50,7 +50,7 @@ export default function DemoReduxApp() {
                     </div>
                     <div className="form-group">
                         <label className="card-title">Content</label>
-                        <input type="text" name='name' className='form-control' />
+                        <input type="text" name='content' className='form-control' />
                     </div>
                     <div className="form-group">
                         <button className='btn btn-success'>Send</button>

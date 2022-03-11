@@ -1,0 +1,18 @@
+-------------------- Auto-Git Log --------------------
+		Fri Mar 11 2022 09:38:38 GMT+0700 (Indochina Time)
+------------------------------------------------------
+
+Modified files:
+* src/App.js
+
+
+Created files:
+* .autogit/logs/log-10-2-2022-22-39-39.txt
+* src/Hook/DemoReduxApp.js
+* src/redux/reducers/FaceBookReducer.js
+
+
+Deleted files:
+
+
+Renamed files:
