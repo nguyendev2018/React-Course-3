@@ -18,8 +18,15 @@ class TableBugger extends Component {
                     }} className='btn btn-success btn-sm ml-2' type="">+</button>
                 </td>
                 <td>{item.price.toLocaleString()}</td>
-            </tr>
+                <td>{(item.price * item.amount).toLocaleString()}</td>
+            </tr >
         })
+    }
+    total = () => {
+        const listTable = this.props.listTable;
+        return listTable.reduce((current, item, index) => {
+            return current += item.price
+        }, 0);
     }
     render() {
         return (
@@ -31,12 +38,14 @@ class TableBugger extends Component {
                             <th>Name</th>
                             <th>Amount</th>
                             <th>Price</th>
+                            <th>Total</th>
                         </tr>
                     </thead>
                     <tbody>
                         {this.renderItem()}
                     </tbody>
                 </table>
+                <p>Total {this.total()}</p>
             </div>
         )
     }

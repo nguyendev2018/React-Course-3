@@ -22,12 +22,13 @@ const BuggerReducer = (state = stateDefault, action) => {
                 if (action.trueOrFalse == true)
                     listTable[index].amount += 1;
                 else {
-                    if (listTable[index].amount > 1) {
-                        listTable[index].amount -= 1;
+                    if (listTable[index].amount < 1) {
+                        alert("phải lớn hơn 1")
+
                     }
                     else {
 
-                        alert("phải lớn hơn 1")
+                        listTable[index].amount -= 1;
                     }
                 }
 
