@@ -1,0 +1,17 @@
+-------------------- Auto-Git Log --------------------
+		Fri Mar 11 2022 21:38:27 GMT+0700 (Indochina Time)
+------------------------------------------------------
+
+Modified files:
+* src/Bugger/TableBugger.js
+* src/redux/reducers/BuggerReducer.js
+
+
+Created files:
+* .autogit/logs/log-11-2-2022-21-8-20.txt
+
+
+Deleted files:
+
+
+Renamed files:

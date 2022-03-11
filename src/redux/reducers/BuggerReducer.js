@@ -18,8 +18,18 @@ const BuggerReducer = (state = stateDefault, action) => {
             let listTable = [...state.TableBugger];
             let index = listTable.findIndex(item => item.id === action.itemId);
             if (index !== -1) {
-                if (action.trueOrFalse)
-                    listTable[index].amount -= 1;
+                console.log(listTable[index].amount);
+                if (action.trueOrFalse == true)
+                    listTable[index].amount += 1;
+                else {
+                    if (listTable[index].amount > 1) {
+                        listTable[index].amount -= 1;
+                    }
+                    else {
+
+                        alert("phải lớn hơn 1")
+                    }
+                }
 
             }
             state.TableBugger = listTable;
