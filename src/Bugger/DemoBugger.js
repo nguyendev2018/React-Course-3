@@ -1,18 +1,31 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
 import './Bugger.css'
-export default class DemoBugger extends Component {
+class DemoBugger extends Component {
+    renderItem = () => {
+        let listBugger = this.props.listBugger;
+        return listBugger.map((item, index) => {
+            return <div className='content' key={index}>
+                <div className={item.name}></div>
+            </div>
+        })
+
+    }
     render() {
         return (
             <div>
-                <div className='box'>
+                <div className='box' style={{ width: "500px", margin: "0 auto" }}>
                     <div className='breadTop'></div>
-                    <div className='salad'></div>
-                    <div className='beef'></div>
-                    <div className='cheese'></div>
-
+                    {this.renderItem()}
                     <div className='breadBottom'></div>
                 </div>
             </div>
         )
     }
 }
+const mapStateToProps = (state) => {
+    return {
+        listBugger: state.BuggerReducer.listBugger
+    }
+}
+export default connect(mapStateToProps)(DemoBugger)

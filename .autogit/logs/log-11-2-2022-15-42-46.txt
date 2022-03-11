@@ -1,0 +1,19 @@
+-------------------- Auto-Git Log --------------------
+		Fri Mar 11 2022 15:42:46 GMT+0700 (Indochina Time)
+------------------------------------------------------
+
+Modified files:
+* src/App.js
+* src/Bugger/Bugger.css
+
+
+Created files:
+* .autogit/logs/log-11-2-2022-15-12-33.txt
+* src/Bugger/DemoBugger.js
+* src/redux/reducers/BuggerReducer.js
+
+
+Deleted files:
+
+
+Renamed files:

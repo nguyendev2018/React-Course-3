@@ -5,3 +5,7 @@ const stateDefault = {
         { id: 3, name: "salad" },
     ]
 }
+const BuggerReducer = (state = stateDefault, action) => {
+    return { ...state }
+}
+export default BuggerReducer
