@@ -1,5 +1,5 @@
 const stateDefault = {
-    comment: [
+    comments: [
         {
             id: 1, name: "Nguyen", content: "nguyen xinh", avatar: `https://i.pravatar.cc/150?u=Nguyen`
         },
@@ -12,6 +12,12 @@ const stateDefault = {
     ]
 }
 const FaceBookReducer = (state = stateDefault, action) => {
+    switch (action.type) {
+        case "addComment": {
+            state.comments = [...state.comments, action.newUserComment];
+            return { ...state }
+        }
+    }
     return { ...state }
 }
 export default FaceBookReducer

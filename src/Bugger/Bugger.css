@@ -1,0 +1,52 @@
+.breadTop{
+    height: 20%;
+    width: 50%;
+     background: -webkit-gradient(linear, left top, left bottom, from
+    background: -webkit-linear-gradient (O#bc581e, O#e27b36);
+    background: -0-linear-gradient (O#bc581e, O#e27b36);
+     background: linear-gradient(O#bc581e, O#e27b36);                                                                 #bc581e), to (O#e27b36));
+    border-radius: 50% 50% e e;
+     -webkit-box-shadow: inset -15px e
+    box-shadow: inset -15px e O#c15711;
+    margin: 2% auto;
+    position: relative;
+    height: 100px;
+                                          I#c15711;
+}
+ 
+.breadBottom{
+    height: 13%;
+   width: 50%;
+   background: -webkit-gradient(linear, left top, left bottom, from (O#F08E4A), to (O#e27b36));
+   background: -webkit-linear-gradient (O#F08E4A, O#e27b36);
+   background: -o-linear-gradient(O#F08E4A, D#e27b36);
+   background: linear-gradient(D#F08E4A, D#e27b36);
+   border-radius: e 0 30px 30px;
+    -webkit-box-shadow: inset -15px e #c15711;
+   box-shadow: inset -15px e I #c15711;
+   margin: 2% auto;
+   height: 100px;
+}
+.salad{
+    width: 70%;
+    height: 7%;
+    margin: 2% auto;
+    background: -webkit-gradient(linear, left top, left bottom, from (#228c1d), to (#91ce50));
+    background: -webkit-linear-gradient(#228c1d, #91ce50);
+    background: -0-1linear-gradient(#228c1d, #91ce50);
+    background: linear-gradient(#228c1d,#91ce50);
+    border-radius: 20px;
+    height: 10px;
+}
+
+.beef{
+    width: 50%;
+    height: 8%;
+    background:-webkit-gradient(linear, left top, left bottom, from 7F3608), to 702ee5);
+    background:-webkit-linear-gradient (#7f3608, #702e05);
+    background:-o-linear-gradient(#7f3608, #702e05);
+     background:linear-gradient(#7f3608, #702e05);
+    margin: 2% auto;
+    border-radius: 15px;
+    height: 50px;
+}
