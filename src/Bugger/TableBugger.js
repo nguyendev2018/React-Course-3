@@ -25,8 +25,8 @@ class TableBugger extends Component {
     total = () => {
         const listTable = this.props.listTable;
         return listTable.reduce((current, item, index) => {
-            return current += item.price
-        }, 0);
+            return current += (item.price * item.amount)
+        }, 0).toLocaleString();
     }
     render() {
         return (
