@@ -21,17 +21,35 @@ const BuggerReducer = (state = stateDefault, action) => {
                 if (action.trueOrFalse == true) {
                     listTable[index].amount += 1;
                     let getName = listTable[index].name;
-                    state.listBugger = [...state.listBugger, name: getName]
+                    let obj = {
+                        id: Date.now(),
+                        name: getName
+                    }
+                    let listBugger = [...state.listBugger];
+                    listBugger.push(obj);
+                    state.listBugger = listBugger
+                    state.TableBugger = listTable
+                    return { ...state }
                 }
 
                 else {
-                    if (listTable[index].amount < 1) {
-                        alert("phải lớn hơn 1")
+                    if (listTable[index].amount > 1) {
+                        listTable[index].amount -= 1;
+                        let listBugger = [...state.listBugger]
+                        console.log(listBugger);
+
+                        let indexBugger = listBugger.findIndex(item => item.id == listTable[index].id)
+                        if (indexBugger !== -1) {
+                            console.log(listBugger.splice(index, 1));
+                        }
+                        state.listBugger = listBugger
+                        state.TableBugger = listTable
+                        return { ...state }
 
                     }
                     else {
+                        alert("phải lớn hơn 1")
 
-                        listTable[index].amount -= 1;
                     }
                 }
 
