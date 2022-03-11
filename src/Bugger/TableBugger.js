@@ -5,8 +5,8 @@ class TableBugger extends Component {
     renderItem = () => {
         const listTable = this.props.listTable;
         return listTable.map((item, index) => {
-            return <tr>
-                <td scope="row">{item.id}</td>
+            return <tr key={index}>
+                <td >{item.id}</td>
                 <td>{item.name}</td>
                 <td>
                     <button onClick={() => {

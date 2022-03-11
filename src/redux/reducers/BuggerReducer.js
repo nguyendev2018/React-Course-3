@@ -1,3 +1,5 @@
+import { inDecreaseAmount } from "../types/Bugger";
+
 const stateDefault = {
     listBugger: [
         { id: 1, name: "beef" },
@@ -11,6 +13,18 @@ const stateDefault = {
     ]
 }
 const BuggerReducer = (state = stateDefault, action) => {
+    switch (action.type) {
+        case inDecreaseAmount: {
+            let listTable = { ...state.TableBugger };
+            let index = listTable.find(item => item.id === action.itemId);
+            console.log(index);
+        }
+
+            break;
+
+        default:
+            break;
+    }
     return { ...state }
 }
 export default BuggerReducer
