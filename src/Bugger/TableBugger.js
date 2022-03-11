@@ -10,10 +10,12 @@ class TableBugger extends Component {
                 <td>{item.name}</td>
                 <td>
                     <button onClick={() => {
-                        this.props.inDecreaseAmount(item.id)
+                        this.props.inDecreaseAmount(item.id, true)
                     }} className='btn btn-success btn-sm mr-2' type="">-</button>
                     {item.amount}
-                    <button className='btn btn-success btn-sm ml-2' type="">+</button>
+                    <button onClick={() => {
+                        this.props.inDecreaseAmount(item.id, false)
+                    }} className='btn btn-success btn-sm ml-2' type="">+</button>
                 </td>
                 <td>{item.price.toLocaleString()}</td>
             </tr>

@@ -16,7 +16,14 @@ const BuggerReducer = (state = stateDefault, action) => {
     switch (action.type) {
         case inDecreaseAmountType: {
             let listTable = [...state.TableBugger];
-            let index = listTable.find(item => item.id === action.itemId);
+            let index = listTable.findIndex(item => item.id === action.itemId);
+            if (index !== -1) {
+                if (action.trueOrFalse)
+                    listTable[index].amount -= 1;
+
+            }
+            state.TableBugger = listTable;
+            return { ...state }
 
         }
 
