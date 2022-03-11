@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { inDecreaseAmount } from '../redux/types/Bugger';
+import { inDecreaseAmount } from '../redux/actions/BugggerAction';
 class TableBugger extends Component {
     renderItem = () => {
         const listTable = this.props.listTable;

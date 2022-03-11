@@ -1,5 +1,5 @@
-import { inDecreaseAmount } from "../types/Bugger"
+import { inDecreaseAmountType } from "../types/Bugger"
 export const inDecreaseAmount = (itemId) => ({
-    type: inDecreaseAmount,
+    type: inDecreaseAmountType,
     itemId
 })

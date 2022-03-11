@@ -1,1 +1,1 @@
-export const inDecreaseAmount = "inDecreaseAmount";
+export const inDecreaseAmountType = "inDecreaseAmountType";
