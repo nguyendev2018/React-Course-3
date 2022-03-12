@@ -40,7 +40,8 @@ const BuggerReducer = (state = stateDefault, action) => {
 
                         let indexBugger = listBugger.findIndex(item => item.id == listTable[index].id)
                         if (indexBugger !== -1) {
-                            console.log(listBugger.splice(index, 1));
+                            listBugger.splice(index, 1)
+                            state.listBugger = listBugger
                         }
                         state.listBugger = listBugger
                         state.TableBugger = listTable
