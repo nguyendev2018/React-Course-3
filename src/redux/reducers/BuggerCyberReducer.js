@@ -7,6 +7,7 @@ const burgerState = {
     },
     total: 85
 }
-export default (state = burgerState, action) => {
+const BuggerCyberReducer = (state = burgerState, action) => {
     return { ...state }
 }
+export default BuggerCyberReducer

@@ -4,9 +4,10 @@ import '../Bugger/Bugger.css'
 class DemoBugger extends Component {
     renderItem = () => {
         let listBugger = this.props.listBugger;
-        for (const key in listBugger) {
-            console.log(key, listBugger[key])
-        }
+        // for (const key in listBugger) {
+        //     console.log(key, listBugger[key])
+        // }
+        console.log(listBugger);
 
     }
     render() {
@@ -26,7 +27,7 @@ class DemoBugger extends Component {
 }
 const mapStateToProps = (state) => {
     return {
-        listBugger: state.BuggerReducer.listBugger
+        listBugger: state.BuggerCyberReducer.listBugger
     }
 }
 export default connect(mapStateToProps)(DemoBugger)
