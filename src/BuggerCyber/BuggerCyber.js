@@ -1,15 +1,12 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import './Bugger.css'
-import TableBugger from './TableBugger';
+import '../Bugger/Bugger.css'
 class DemoBugger extends Component {
     renderItem = () => {
         let listBugger = this.props.listBugger;
-        return listBugger.map((item, index) => {
-            return <div className='content' key={index}>
-                <div className={item.name}></div>
-            </div>
-        })
+        for (const key in listBugger) {
+            console.log(key, listBugger[key])
+        }
 
     }
     render() {
@@ -18,6 +15,7 @@ class DemoBugger extends Component {
                 <div className='box' style={{ width: "500px", margin: "0 auto" }}>
 
                     <div className='breadTop'></div>
+                    {this.renderItem()}
                     <div className='breadBottom'></div>
                 </div>
                 <div className='box-table' style={{ width: "500px", margin: "0 auto", marginTop: "50px" }}>

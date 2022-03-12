@@ -1,5 +1,5 @@
 const burgerState = {
-    burger: { salad: 1, cheese: 1, beef: 1 },
+    listBurger: { salad: 1, cheese: 1, beef: 1 },
     menu: {
         salad: 10,
         cheese: 10,
@@ -7,6 +7,6 @@ const burgerState = {
     },
     total: 85
 }
-export const BuggerReducer = (state = burgerState, action) => {
+export default (state = burgerState, action) => {
     return { ...state }
 }
