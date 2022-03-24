@@ -5,16 +5,17 @@ import TableBugger from './TableBugger';
 class DemoBugger extends Component {
     renderItem = () => {
         let listBugger = this.props.listBugger;
-        return listBugger.map((item, index) => {
-            return <div className='content' key={index}>
-                <div className={item.name}></div>
+        return Object.entries(listBugger).map(([propsBurger, value], index) => {
+            return <div key={index} className={propsBurger}>
+
             </div>
         })
 
     }
     render() {
         return (
-            <div>
+            <div className='container'>
+
                 <div className='box' style={{ width: "500px", margin: "0 auto" }}>
 
                     <div className='breadTop'></div>
@@ -33,4 +34,4 @@ const mapStateToProps = (state) => {
         listBugger: state.BuggerReducer.listBugger
     }
 }
-export default connect(mapStateToProps)(DemoBugger)
+export default connect(mapStateToProps, null)(DemoBugger)
