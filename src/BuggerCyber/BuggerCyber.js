@@ -3,10 +3,7 @@ import { connect } from 'react-redux'
 import '../Bugger/Bugger.css'
 class DemoBugger extends Component {
     renderItem = () => {
-        let listBugger = this.props.listBugger;
-        // for (const key in listBugger) {
-        //     console.log(key, listBugger[key])
-        // }
+        let { listBugger } = this.props;
         console.log(listBugger);
 
     }
@@ -30,4 +27,4 @@ const mapStateToProps = (state) => {
         listBugger: state.BuggerCyberReducer.listBugger
     }
 }
-export default connect(mapStateToProps)(DemoBugger)
+export default connect(mapStateToProps, null)(DemoBugger)

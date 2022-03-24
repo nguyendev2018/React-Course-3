@@ -46,22 +46,16 @@ const BuggerReducer = (state = stateDefault, action) => {
                         state.listBugger = listBugger
                         state.TableBugger = listTable
                         return { ...state }
-
                     }
                     else {
                         alert("phải lớn hơn 1")
-
                     }
                 }
-
             }
             state.TableBugger = listTable;
             return { ...state }
-
         }
-
             break;
-
         default:
             break;
     }

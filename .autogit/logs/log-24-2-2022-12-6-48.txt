@@ -1,0 +1,16 @@
+-------------------- Auto-Git Log --------------------
+		Thu Mar 24 2022 12:06:48 GMT+0700 (Indochina Time)
+------------------------------------------------------
+
+Modified files:
+* src/Bugger/DemoBugger.js
+
+
+Created files:
+* .autogit/logs/log-12-2-2022-16-25-37.txt
+
+
+Deleted files:
+
+
+Renamed files:

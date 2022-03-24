@@ -5,12 +5,10 @@ import TableBugger from './TableBugger';
 class DemoBugger extends Component {
     renderItem = () => {
         let listBugger = this.props.listBugger;
-        return Object.entries(listBugger).map(([propsBurger, value], index) => {
-            return <div key={index} className={propsBurger}>
-
-            </div>
-        })
-
+        // return Object.entries(listBugger).map((item, index) => {
+        //     console.log(item);
+        // })
+        console.log(listBugger);
     }
     render() {
         return (
