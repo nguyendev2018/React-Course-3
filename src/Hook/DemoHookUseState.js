@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 
 export default function DemoHookUseState(props) {
-    {/* //typle */ }
+    {/* //tuple */ }
     const [state, setState] = useState({ like: 0 });
     //ANCHOR khi gán giá trị cho state thì nó là hàm bất đồng bộ nên sẽ gán lại state
     //Nên khi log giá trị thì đặt ở đây

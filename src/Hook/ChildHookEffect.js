@@ -6,9 +6,10 @@ export default function ChildHookEffect() {
         console.log('didUpdate');
 
     });
+
     return (
         <div>
-            s
+            <h1>Update</h1>
         </div>
     )
 }
