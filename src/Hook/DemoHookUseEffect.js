@@ -4,11 +4,7 @@ import ChildHookEffect from './ChildHookEffect';
 export default function DemoHookUseEffect() {
     let [number, setNumber] = useState(1);
     let [like, setLike] = useState(1);
-    // useEffect là hàm chạy sau khi giao diện render thay cho didUpdate và didMount trong mọi trường hợp
-    // useEffect(() => {
-    //     console.log("DidMount");
-    //     console.log("Effect");
-    // })
+
     // cách viết thay thế cho componentDidMount
     useEffect(() => {
         console.log('DidMount');
