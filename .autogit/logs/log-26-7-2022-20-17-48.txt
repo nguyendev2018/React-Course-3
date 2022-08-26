@@ -1,0 +1,19 @@
+-------------------- Auto-Git Log --------------------
+Fri Aug 26 2022 20:17:48 GMT+0700 (Indochina Time)
+------------------------------------------------------
+
+Modified files:
+* src/App.js
+* src/Hook/ChildHookEffect.js
+* src/Hook/DemoHookUseEffect.js
+* src/Hook/DemoHookUseState.js
+
+
+Created files:
+* .autogit/logs/log-26-7-2022-19-17-7.txt
+
+
+Deleted files:
+
+
+Renamed files:
