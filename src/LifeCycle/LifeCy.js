@@ -4,6 +4,10 @@ class LifeCy extends Component {
   state = {
     number: 1,
   };
+
+  shouldComponentUpdate() {
+    return false;
+  }
   static getDerivedStateFromProps(newProps, currentState) {
     console.log("getDerivedStateFromProps");
     return null;
