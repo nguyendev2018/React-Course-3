@@ -6,6 +6,6 @@ import DemoHookUseState from "./Hook/DemoHookUseState";
 import LifeCy from "./LifeCycle/LifeCy";
 export default class App extends Component {
   render() {
-    return <LifeCy></LifeCy>;
+    return <DemoHookUseState></DemoHookUseState>;
   }
 }
