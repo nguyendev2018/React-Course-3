@@ -13,7 +13,7 @@ export default function DemoHookUseEffect() {
         setNumber(number + 1)
     }
     // cách viết thay thế cho didUpdate
-
+ 
     useEffect(() => {
         console.log('number changed');
     }, [number])
