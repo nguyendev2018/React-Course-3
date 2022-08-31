@@ -1,20 +1,14 @@
 import React, { useState } from "react";
 
 export default function DemoHookUseState() {
-  let [state, setState] = useState({ like: 0 });
+  let [state, setState] = useState({ like: 1 });
   const handleClick = () => {
     setState({ like: state.like + 1 });
   };
   return (
     <div>
       <p>{state.like}</p>
-      <button
-        onClick={() => {
-          handleClick;
-        }}
-      >
-        Click
-      </button>
+      <button onClick={handleClick}>Click</button>
     </div>
   );
 }
