@@ -1,14 +1,53 @@
 import React, { useReducer } from "react";
 const initialCart = [{ id: 1, name: "Iphone", price: 1000, quantity: 1 }];
 const carReducer = (state, action) => {
+  switch (action.type) {
+    case "addToCart":
+      let cartUpdate = [...state, action.item];
+      console.log(cartUpdate);
+      return cartUpdate;
+      break;
+
+    default:
+      break;
+  }
   return [...state];
 };
+// vi no la mang khong can phai re-render nen khong de trong function
+let arrProduct = [
+  { id: 1, name: "iPhone", price: 1000 },
+  { id: 2, name: "note 10", price: 5000 },
+  { id: 3, name: "Huawei 10", price: 5000 },
+];
 export default function DemoUseReducer() {
   let [cart, dispatch] = useReducer(carReducer, initialCart);
-  console.log(`cart`, cart);
-  console.log(`dispatch`, dispatch);
+  const itemClick = (item) => {
+    const action = {
+      type: "addToCart",
+      item,
+    };
+    dispatch(action);
+  };
   return (
     <div className="container">
+      <div className="row">
+        {arrProduct.map((item, index) => {
+          return (
+            <div key={index}>
+              <h4 className="card-title">{item.name}</h4>
+              <p className="card-text">{item.price}</p>
+              <button
+                className="btn btn-success"
+                onClick={() => {
+                  itemClick(item);
+                }}
+              >
+                Add to cart
+              </button>
+            </div>
+          );
+        })}
+      </div>
       <h3>Cart</h3>
       <table className="table">
         <thead>
