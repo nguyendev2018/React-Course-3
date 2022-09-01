@@ -27,6 +27,7 @@ let arrProduct = [
 ];
 export default function DemoUseReducer() {
   let [cart, dispatch] = useReducer(carReducer, initialCart);
+  console.log(cart);
   const itemClick = (item) => {
     const action = {
       type: "addToCart",
