@@ -8,7 +8,18 @@ let productList = [
 const initialState = [{ id: 2, name: "iphone 5", price: 6000, quantity: 1 }];
 const cartReducer = (state, action) => {
   switch (action.type) {
-    case value:
+    case "addToCart":
+      const updateState = [...state];
+      const index = updateState.findIndex(
+        (itemCart) => itemCart.id === action.item.id
+      );
+      if (index !== -1) {
+        updateState[index].quantity++;
+      } else {
+        const itemAdd = { ...action.item };
+        updateState.push(itemAdd);
+      }
+      return updateState;
       break;
 
     default:
