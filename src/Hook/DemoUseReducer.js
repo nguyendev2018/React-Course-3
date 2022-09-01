@@ -3,13 +3,17 @@ const initialCart = [{ id: 1, name: "iPhone", price: 1000, quantity: 1 }];
 const carReducer = (state, action) => {
   switch (action.type) {
     case "addToCart":
-      const cartIndex = state.findIndex(
-        (itemCart) => itemCart.id === action.item.id
+      let cartUpdate = [...state];
+      const indexCart = cartUpdate.findIndex(
+        (itemCart) => itemCart.id == action.item.id
       );
-      if (cartIndex !== -1) {
-        console.log(state[cartIndex]);
+      if (indexCart !== -1) {
+        cartUpdate[indexCart].quantity++;
+      } else {
+        const addCart = { ...action.item, quantity: 1 };
+        cartUpdate.push(addCart);
       }
-      return [...state];
+      return cartUpdate;
     default:
       break;
   }
