@@ -1,13 +1,15 @@
 import React, { useReducer } from "react";
-const initialCart = [{ id: 1, name: "Iphone", price: 1000, quantity: 1 }];
+const initialCart = [{ id: 1, name: "iPhone", price: 1000, quantity: 1 }];
 const carReducer = (state, action) => {
   switch (action.type) {
     case "addToCart":
-      let cartUpdate = [...state, action.item];
-      console.log(cartUpdate);
-      return cartUpdate;
-      break;
-
+      const cartIndex = state.findIndex(
+        (itemCart) => itemCart.id === action.item.id
+      );
+      if (cartIndex !== -1) {
+        console.log(state[cartIndex]);
+      }
+      return [...state];
     default:
       break;
   }
