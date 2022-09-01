@@ -4,40 +4,68 @@ let productList = [
   { id: 2, name: "iphone 5", price: 6000, quantity: 1 },
   { id: 3, name: "iphone 6", price: 2000, quantity: 1 },
 ];
-const arrayList = productList.map((item, index) => {
-  return (
-    <div key={index}>
-      <h4 className="title">{item.name}</h4>
-      <p className="price">{item.price}</p>
-      <button className="btn btn-primary">Add </button>
-    </div>
-  );
-});
+
 const initialState = [{ id: 2, name: "iphone 5", price: 6000, quantity: 1 }];
 const cartReducer = (state, action) => {
-  console.log(state);
+  switch (action.type) {
+    case value:
+      break;
+
+    default:
+      break;
+  }
   return [...state];
 };
 export default function DemoUseReducer() {
   const [cart, dispatch] = useReducer(cartReducer, initialState);
+  const handleClick = (item) => {
+    const action = {
+      type: "addToCart",
+      item,
+    };
+    dispatch(action);
+  };
   return (
     <div>
-      <div>{arrayList}</div>
-      <table>
+      {productList.map((item, index) => {
+        return (
+          <div key={index}>
+            <h4 className="title">{item.name}</h4>
+            <p className="price">{item.price}</p>
+            <button
+              onClick={() => {
+                handleClick(item);
+              }}
+              className="btn btn-primary"
+            >
+              Add
+            </button>
+          </div>
+        );
+      })}
+
+      <table className="table">
         <thead>
           <tr>
             <th>id</th>
             <th>name</th>
             <th>price</th>
             <th>quantity</th>
+            <th>total</th>
           </tr>
         </thead>
         <tbody>
-          <tr>
-            {cart.map((item, index) => {
-              return <td></td>;
-            })}
-          </tr>
+          {cart.map((item, index) => {
+            return (
+              <tr key={index}>
+                <td>{item.id}</td>
+                <td>{item.name}</td>
+                <td>{item.price}</td>
+                <td>{item.quantity}</td>
+                <td>{item.price * item.quantity}</td>
+              </tr>
+            );
+          })}
         </tbody>
       </table>
     </div>
