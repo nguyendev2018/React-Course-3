@@ -1,6 +1,6 @@
 import React, { useReducer } from "react";
 let productList = [
-  { id: 1, name: "iphone 4", price: 2000, quantity: 1 },
+  { id: 1, name: "iphone 14", price: 2000, quantity: 1 },
   { id: 2, name: "iphone 5", price: 6000, quantity: 1 },
   { id: 3, name: "iphone 6", price: 2000, quantity: 1 },
 ];

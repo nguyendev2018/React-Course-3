@@ -1,0 +1,16 @@
+-------------------- Auto-Git Log --------------------
+Tue Sep 06 2022 20:57:08 GMT+0700 (Indochina Time)
+------------------------------------------------------
+
+Modified files:
+* src/Hook/DemoUseReducer.js
+
+
+Created files:
+* .autogit/logs/log-6-8-2022-19-56-29.txt
+
+
+Deleted files:
+
+
+Renamed files:
