@@ -14,7 +14,9 @@ const cartReducer = (state, action) => {
         (itemCart) => itemCart.id === action.item.id
       );
       if (index !== -1) {
-        updateState[index].quantity++;
+        console.log(updateState[index].quantity++);
+        console.log(updateState[index]);
+        // updateState[index].quantity++;
       } else {
         const itemAdd = { ...action.item };
         updateState.push(itemAdd);
